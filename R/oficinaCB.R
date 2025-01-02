@@ -15,7 +15,7 @@
 
 {
   gc();gc();gc()
-  load('https://github.com/ruiz22112703/senamhiCBBA0/raw/refs/heads/main/oficina/estacionesR.rda')
+  load(url('https://github.com/ruiz22112703/senamhiCBBA0/raw/refs/heads/main/oficina/estacionesR.rda'))
   lis1<-lis[-which(lis=="Sillar-cbba (Automatica).r")]
   if(a==0){
     for (i in 1:length(lis)) {
