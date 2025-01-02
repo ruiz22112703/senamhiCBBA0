@@ -13,7 +13,7 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-senmahiCB <- function(a,b) {
+{
   rm(list = ls())
   gc();gc();gc()
   load('https://github.com/ruiz22112703/senamhiCBBA0/raw/refs/heads/main/oficina/estacionesR.rda')
@@ -131,5 +131,4 @@ senmahiCB <- function(a,b) {
   #
   rm(list = ls());
   gc();gc();gc()
-
 }
