@@ -19,7 +19,7 @@
   lis1<-lis[-which(lis=="Sillar-cbba (Automatica).r")]
   lis<-URLencode(lis,reserved = FALSE)
   lis1<-URLencode(lis1,reserved = FALSE)
-  if(a==0){
+  if(aaa==0){
     for (i in 1:length(lis)) {
       tryCatch({
         source(glue("https://github.com/ruiz22112703/senamhiCBBA0/raw/refs/heads/main/oficina/INFO/{lis[i]}"))
@@ -29,7 +29,7 @@
     }
     cat('Se ha actualizados datos de las estaciones de Cochabamba \n')
     cat("Gracias por el Servicio...!!!")
-  }else if(a==1){
+  }else if(aaa==1){
     for (j in 1:length(lis1)) {
       tryCatch({
         source(glue("https://github.com/ruiz22112703/senamhiCBBA0/raw/refs/heads/main/oficina/INFO/{lis1[j]}"))
@@ -68,7 +68,7 @@
     id_est<-c()
     for(i in est_send1){
       a<-read.csv(i)
-      dayaf<-b
+      dayaf<-bbb
       #print(i)
       if(a[nrow(a),1]==(Sys.Date())|(a[nrow(a),1]==(Sys.Date()-1))){
 
