@@ -17,10 +17,12 @@
   gc();gc();gc()
   load(url('https://github.com/ruiz22112703/senamhiCBBA0/raw/refs/heads/main/oficina/estacionesR.rda'))
   lis1<-lis[-which(lis=="Sillar-cbba (Automatica).r")]
+  lis<-URLencode(lis,reserved = FALSE)
+  lis1<-URLencode(lis1,reserved = FALSE)
   if(a==0){
     for (i in 1:length(lis)) {
       tryCatch({
-        source(glue("https://github.com/ruiz22112703/senamhiCBBA0/raw/refs/heads/main/oficina/INFO/{lis[i]}"),encoding = 'UTF-8')
+        source(glue("https://github.com/ruiz22112703/senamhiCBBA0/raw/refs/heads/main/oficina/INFO/{lis[i]}"))
       }, error=function(e){
         print(paste("Error en esta estación.....!!!"))
       })
@@ -30,7 +32,7 @@
   }else if(a==1){
     for (j in 1:length(lis1)) {
       tryCatch({
-        source(glue("https://github.com/ruiz22112703/senamhiCBBA0/raw/refs/heads/main/oficina/INFO/{lis1[j]}"),encoding = 'UTF-8')
+        source(glue("https://github.com/ruiz22112703/senamhiCBBA0/raw/refs/heads/main/oficina/INFO/{lis1[j]}"))
       }, error=function(e){
         print(paste("Error en esta estación.....!!!"))
       })
