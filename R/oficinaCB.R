@@ -16,12 +16,12 @@
 senmahiCB <- function(a,b) {
   rm(list = ls())
   gc();gc();gc()
-  load('https://github.com/ruiz22112703/cbbaOFI/raw/refs/heads/main/oficina/estacionesR.rda')
+  load('https://github.com/ruiz22112703/senamhiCBBA0/raw/refs/heads/main/oficina/estacionesR.rda')
   lis1<-lis[-which(lis=="Sillar-cbba (Automatica).r")]
   if(a==0){
     for (i in 1:length(lis)) {
       tryCatch({
-        source(glue("https://github.com/ruiz22112703/cbbaOFI/raw/refs/heads/main/oficina/INFO/{lis[i]}"),encoding = 'UTF-8')
+        source(glue("https://github.com/ruiz22112703/senamhiCBBA0/raw/refs/heads/main/oficina/INFO/{lis[i]}"),encoding = 'UTF-8')
       }, error=function(e){
         print(paste("Error en esta estación.....!!!"))
       })
@@ -31,7 +31,7 @@ senmahiCB <- function(a,b) {
   }else if(a==1){
     for (j in 1:length(lis1)) {
       tryCatch({
-        source(glue("https://github.com/ruiz22112703/cbbaOFI/raw/refs/heads/main/oficina/INFO/{lis1[j]}"),encoding = 'UTF-8')
+        source(glue("https://github.com/ruiz22112703/senamhiCBBA0/raw/refs/heads/main/oficina/INFO/{lis1[j]}"),encoding = 'UTF-8')
       }, error=function(e){
         print(paste("Error en esta estación.....!!!"))
       })
