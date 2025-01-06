@@ -56,7 +56,8 @@
                 'Lahuachama Presa (Aut.).csv','Mizque (Automática).csv','Parque Tunari SDC (Autom).csv',
                 'Pojo (Automática).csv','Presa Misicuni Aut..csv','Puerto Villarroel (Automatica).csv','Pocona (Automatica).csv','Linkupata (Automatica).csv',
                 'Pasorapa (Automatica).csv','Sipe Sipe (Automática).csv','Sacabamba.csv','Tiraque (Automatica).csv','Vacas (Automática).csv',
-                'Viloma (Automatica).csv','Vila Vila (Automatica).csv','Templo Misicuni.csv','Sillar-cbba (Automatica).csv','Omereque (Automática).csv')
+                'Viloma (Automatica).csv','Vila Vila (Automatica).csv','Templo Misicuni.csv','Sillar-cbba (Automatica).csv','Omereque (Automática).csv','Sauce Pilapata (Autom.).csv',
+                'Presa Totora Qhocha Aut.csv')
     est_send1<-dir0[dir0%in%est_send]
     cat('\n',file = 'C:/Users/Cocha/Desktop/output-cbba/texto1.txt')
     cat(paste("*SERIVICIO NACIONAL DE METEOROLOGIA E HIDROLOGIA*",'\n'),append = T,file = 'C:/Users/Cocha/Desktop/output-cbba/texto1.txt')
@@ -98,8 +99,8 @@
 
     metropolitana<-c("Chimboco (Aut)", "INAC Aeropuerto Cbba" ,"Parque Tunari SDC (Autom)","Sipe Sipe (Automática)","Viloma (Automatica)", 'Cochabamba Aeropuerto')
     valles<-c("Sacabamba",'Anzaldo_M(GPRS)','Sichez_H(GPRS)','Villa Rivero_M (GPRS)','Lahuachama Presa (Aut.)','Linkupata (Automatica)')
-    tropico<-c('Bulo Bulo_M (GPRS)','Villa Tunari_H (GPRS)','Sillar-cbba (Automatica)','Chimore Aeropuerto')
-    ConoSur<-c('Aiquile Automática','Tiraque (Automatica)','Vacas (Automática)','Vila Vila (Automatica)','Pasorapa (Automatica)','Pojo (Automática)','Alalay (Automatica)','Mizque (Automática)','Pocona (Automatica)','Omereque (Automática)')
+    tropico<-c('Bulo Bulo_M (GPRS)','Villa Tunari_H (GPRS)','Sillar-cbba (Automatica)','Chimore Aeropuerto','Sauce Pilapata (Autom.)')
+    ConoSur<-c('Aiquile Automática','Tiraque (Automatica)','Vacas (Automática)','Vila Vila (Automatica)','Pasorapa (Automatica)','Pojo (Automática)','Alalay (Automatica)','Mizque (Automática)','Pocona (Automatica)','Omereque (Automática)','Presa Totora Qhocha Aut')
     altiplano<-c('Aguadas Misicuni','Calientes Automática','Cuatro Esquinas Misicuni','Presa Misicuni Aut.','Templo Misicuni')
 
     region_1<-list(metropolitana,valles,tropico,ConoSur,altiplano)
