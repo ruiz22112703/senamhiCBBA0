@@ -8,7 +8,7 @@ options(warn=-1)
   setwd(old)
   setwd('C:/Campbellsci/LoggerNet')
   arc<-'Aguadas_EPT_Min15.dat'
-  
+
 #  setwd('input')
  # arc<-dir()
   #vientos
@@ -35,7 +35,7 @@ options(warn=-1)
         }
       }
     }
-    return(ap)  
+    return(ap)
   }
   ##########
   for (i in arc) {
@@ -48,7 +48,7 @@ options(warn=-1)
     if(length(ind)==0){
       b<-a %>% as_tibble()
     } else{
-      b<-a[-ind,] %>% as_tibble()  
+      b<-a[-ind,] %>% as_tibble()
     }
     c<-b %>% separate(col=X,into = c('date','hour'),sep = ' ')
     c$date<-as.Date(c$date)
@@ -68,21 +68,21 @@ options(warn=-1)
                                            tx=max(Max,na.rm = T),
                 tn=min(Min,na.rm = T),HRmean=mean(Avg.1,na.rm = T),
                 HRmax=max(Max.1,na.rm = T),HRmin=min(Min.1,na.rm = T),.groups = 'drop')
-    e0<-e[,c(1,2,4,8,9,10,12,13)]
-    names(e0)<-c("date","time","prcp",'tx','tn','HRmean','HRmax','HRmin')
-    setwd('C:/Users/Cocha/Desktop/output-cbba/out_0')
-    write.csv(e0,gsub('$','.csv',est),row.names = FALSE,sep = ',')
-    
-    iden<-grep(date(now()),e0$date,fixed = T)
-    if(length(iden)!=0){
-      iden1<-which((e0[iden,3]!=0)==TRUE)
-      e1<-e0[iden,]
-      e2<-e1[iden1,]
-      setwd('C:/Users/Cocha/Desktop/output-cbba/out_rain')
-      write.csv(e2,gsub('$','.csv',est),row.names = FALSE,sep = ',')  
-    }else{
-      next
-    }
+    # e0<-e[,c(1,2,4,8,9,10,12,13)]
+    # names(e0)<-c("date","time","prcp",'tx','tn','HRmean','HRmax','HRmin')
+    # setwd('C:/Users/Cocha/Desktop/output-cbba/out_0')
+    # write.csv(e0,gsub('$','.csv',est),row.names = FALSE,sep = ',')
+    #
+    # iden<-grep(date(now()),e0$date,fixed = T)
+    # if(length(iden)!=0){
+    #   iden1<-which((e0[iden,3]!=0)==TRUE)
+    #   e1<-e0[iden,]
+    #   e2<-e1[iden1,]
+    #   setwd('C:/Users/Cocha/Desktop/output-cbba/out_rain')
+    #   write.csv(e2,gsub('$','.csv',est),row.names = FALSE,sep = ',')
+    # }else{
+    #   next
+    # }
     #e1<-e[6677:6772,]
     #head(e1);tail(e1)
     #sum(e1$Tot)
@@ -91,13 +91,13 @@ options(warn=-1)
     #view(e)
     #f$dir123<-DIR(round(f$dir))
     #g<-f[,c(1:13,17,14:16)]
-    
+
     h<-f %>% unite(date,y:d,sep = '-')
     out<-setwd('C:/Users/Cocha/Desktop/output-cbba/out')
     getwd()
     write.csv(h,gsub('$','.csv',est),row.names = F)
     setwd(old)
-    
+
   }
 setwd(old)
 }

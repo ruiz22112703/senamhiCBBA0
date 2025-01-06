@@ -28,7 +28,9 @@
       })
     }
     cat('Se ha actualizados datos de las estaciones de Cochabamba \n')
-    cat("Gracias por el Servicio...!!!")
+    cat("Gracias por el Servicio...!!! \n")
+    cat('\n')
+
   }else if(aaa==1){
     for (j in 1:length(lis1)) {
       tryCatch({
